@@ -58,7 +58,8 @@ The only premise worth pointing out is that some of the features used for the mo
 
 Ideas to build on top of this project and extend it.
 
-1. Add the data from the halftime show - use the number of artists and genres to create new data;
-2. Adapt the data from 1967 to use it on the model;
-3. Edit the column with the Year data, either encoding or normalizing it; _and_
-4. Use nielsen ratings category for the model, instead of float numbers.
+1. The first iteration of this project counted with two steps that might have allowed data leakage. For the sake of "moving on", these mistakes were not changed, however, on a new iteration, they should be looked at. Feature normalization should only happen after the split between training and testing sets and the scaler should be fit to the training set only, to then transform both training and testing sets. Also, a random train_test_split with a time variable might also allow data leakage - [a simple time split validation could be useful](https://forecastegy.com/posts/3-essential-methods-to-do-time-series-validation-in-machine-learning/)
+2. Add the data from the halftime show - use the number of artists and genres to create new data;
+3. Adapt the data from 1967 to use it on the model;
+4. Edit the column with the Year data, either encoding or normalizing it; _and_
+5. Use nielsen ratings category for the model, instead of float numbers.
